@@ -1,0 +1,84 @@
+@import 'globals';
+
+.cart {
+    position: fixed;
+    top: 10%;
+    left: 2.5%;
+    width: 95vw;
+    z-index: 50;
+    background: $white;
+    border-radius: 0.5rem;
+
+    .header {
+        padding: 1.5rem 1rem;
+
+        p {
+            font-weight: 700;
+        }
+    }
+
+    .cart-body {
+        padding: 1.5rem 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .thumbnail {
+            width: 15%;
+
+            img {
+                width: 100%;
+                border-radius: 0.4rem;
+            }
+        }
+
+        .info-price {
+            transform: translateX(-1rem);
+            align-self: center;
+
+            p {
+                color: $grey;
+            }
+
+            span {
+                font-weight: 700;
+                color: $dark-blue;
+            }
+        }
+
+        .delete {
+            width: 6%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .checkout {
+        padding: 0 1rem 2rem 1rem;
+
+        button {
+            background: $orange;
+            color: $near-white;
+            font-size: 1.2rem;
+            border: none;
+            width: 100%;
+            padding: 1rem 0;
+            border-radius: 0.4rem;
+            text-align: center;
+        }
+    }
+
+    .empty {
+        padding: 5.27rem 1rem;
+
+        p {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: $dark-blue;
+        }
+    }
+}

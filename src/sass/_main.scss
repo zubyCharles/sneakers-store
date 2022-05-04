@@ -1,0 +1,115 @@
+@import 'globals';
+
+.main-container {
+    padding: 1.5rem 1rem;
+
+    .main-header {
+        p {
+            color: $orange;
+            font-weight: 700;
+            letter-spacing: 0.1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            padding: 0.7rem 0;
+            line-height: 2.25rem;
+            color: $dark-blue;
+            font-weight: 700;
+        }
+    }
+
+    .main-text {
+        padding: 0.7rem 0;
+
+        p {
+            line-height: 1.65rem;
+            color: $grey;
+        }
+    }
+
+    .price-section {
+        padding: 1rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .new-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 48.5%;
+
+            h2 {
+                font-size: 1.7rem;
+                color: $dark-blue;
+                font-weight: 700;
+            }
+
+            p {
+                text-align: center;
+                padding: 0.2rem 0.6rem;
+                background: $light-orange;
+                border-radius: 0.35rem;
+                color: $orange;
+                font-weight: 700;
+            }
+        }
+
+        .old-price {
+            margin-right: 1.5rem;
+            text-decoration: line-through;
+            color: $grey;
+        }
+    }
+
+    .buttons {
+        padding: 1rem 0;
+        //margin-top: 1rem;
+
+        .minus-add {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1rem 1rem;
+            background: $near-white;
+            border-radius: 0.4rem;
+
+            button {
+                background: none;
+                border: none;
+                padding: 0 1rem;
+            }
+
+            p {
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+
+        .cart-button {
+            width: 100%;
+            margin: 1.2rem 0;
+
+            button {
+                background: $orange;
+                border: none;
+                width: 100%;
+                padding: 1rem 0;
+                border-radius: 0.4rem;
+                text-align: center;
+            }
+
+            span {
+                color: $near-white;
+                font-size: 1.2rem;
+            }
+
+            img {
+                filter: brightness(0) invert(0.9);
+            }
+        }
+    }
+}

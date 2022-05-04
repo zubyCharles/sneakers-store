@@ -1,0 +1,63 @@
+@import 'globals';
+
+.menu {
+    overflow-x: hidden;
+
+    .menu-container {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0.4rem 0 0.4rem 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+        }
+
+        .menuIcon-title {
+            width: auto;
+            transform: translateX(-1.5rem);
+
+            img {
+                height: 40%;
+                transform: translateY(1rem);
+                margin-right: 0.8rem;
+            }
+
+            p {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+        }
+
+        .cartIcon-avatar {
+            transform: translate(3.5rem, 0.65rem);
+
+            .cart-icon {
+                height: 80%;
+            }
+
+
+            span {
+                transform: translate(1.2rem, -0.85rem);
+                color: $orange;
+                //background: $orange;
+                //padding: 0.6px 0.6px;
+                font-size: 1rem;
+                border-radius: 1rem;
+                border: none;
+            }
+
+
+            img {
+                height: 60%;
+            }
+
+            .avatar {
+                width: 20%;
+                margin-left: 1rem;
+            }
+        }
+    }
+}

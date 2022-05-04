@@ -1,0 +1,58 @@
+.carousel {
+    .image {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .carousel-images {
+            width: 400vw;
+            position: relative;
+            transition: transform 1s ease-in-out 10ms;
+            animation: slideIn 20s ease-in-out 1s infinite;
+
+            &.first {
+                transform: translateX(-100vw);
+                transition: all 1s ease-in-out 10ms;
+            }
+
+            &.second {
+                transform: translateX(-200vw);
+                transition: all 1s ease-in-out 10ms;
+            }
+
+            &.third {
+                transform: translateX(-300vw);
+                transition: all 1s ease-in-out 10ms;
+            }
+
+            img {
+                width: 100vw;
+            }
+        }
+
+
+        .next-arrow,
+        .previous-arrow {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            z-index: 10;
+            top: 40%;
+            right: 5%;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+
+            img {
+                width: auto;
+                height: auto;
+                margin: auto;
+                align-items: center;
+            }
+        }
+
+        .previous-arrow {
+            left: 5%
+        }
+    }
+}
