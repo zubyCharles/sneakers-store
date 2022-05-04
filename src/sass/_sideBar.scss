@@ -4,8 +4,8 @@
     position: absolute;
     z-index: 100;
     background: $white;
-    min-height: 100vh;
-    min-width: 75vw;
+    height: 100%;
+    min-width: 80vw;
     transform: translateX(-100%);
     transition: all 300ms ease-in-out 30ms;
 

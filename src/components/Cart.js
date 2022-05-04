@@ -2,11 +2,12 @@ import React from 'react';
 import '../sass/_cart.scss';
 import images from '../assets/images';
 
-const Cart = ({ itemCount, setCount, itemPrice }) => {
+const Cart = ({ itemCount, setCount, itemPrice, setCart }) => {
   return (
     <div className="cart">
       <div className="header">
         <p>Cart</p>
+        <img src={images.CloseIcon} alt="" onClick={() => setCart(false)} />
       </div>
       <hr />
 
@@ -24,15 +25,11 @@ const Cart = ({ itemCount, setCount, itemPrice }) => {
               </p>
             </div>
             <div className="delete">
-              <img
-                src={images.DeleteIcon}
-                alt=""
-                onClick={() => setCount(!itemCount)}
-              />
+              <img src={images.DeleteIcon} alt="" onClick={() => setCount(0)} />
             </div>
           </div>
           <div className="checkout">
-            <button onClick={() => setCount(!itemCount)}>Checkout</button>
+            <button onClick={() => setCount(0)}>Checkout</button>
           </div>
         </>
       ) : (

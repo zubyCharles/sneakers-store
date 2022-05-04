@@ -8,22 +8,38 @@ const TopMenu = ({ itemCount, setCount, itemPrice }) => {
   const [showSideBar, setSideBar] = useState(false);
   const [showCart, setCart] = useState(false);
 
+  const revealSideBar = () => {
+    setSideBar(true);
+
+    if (typeof window !== 'undefined' && window.document) {
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  const hideSideBar = () => {
+    setSideBar(false);
+
+    if (typeof window !== 'undefined' && window.document) {
+      document.body.style.overflow = 'unset';
+    }
+  };
+
   return (
     <>
-      <SideBar sideBar={showSideBar} toggleSideBar={setSideBar} />
+      <div className={showSideBar || showCart ? 'overlay' : null}></div>
+      <SideBar sideBar={showSideBar} hideSideBar={hideSideBar} />
       {showCart && (
-        <Cart itemCount={itemCount} setCount={setCount} itemPrice={itemPrice} />
+        <Cart
+          itemCount={itemCount}
+          setCount={setCount}
+          itemPrice={itemPrice}
+          setCart={setCart}
+        />
       )}
       <div className="menu">
         <div className="menu-container">
           <div className="menuIcon-title">
-            <img
-              onClick={() => {
-                setSideBar(!showSideBar);
-              }}
-              src={images.MenuIcon}
-              alt=""
-            />
+            <img onClick={revealSideBar} src={images.MenuIcon} alt="" />
             <p>sneakers</p>
           </div>
           <div className="cartIcon-avatar">

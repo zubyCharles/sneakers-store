@@ -11,9 +11,16 @@
 
     .header {
         padding: 1.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
 
         p {
             font-weight: 700;
+        }
+
+        img {
+            width: 5%;
+            align-self: center;
         }
     }
 

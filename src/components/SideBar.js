@@ -2,18 +2,12 @@ import React from 'react';
 import '../sass/_sideBar.scss';
 import images from '../assets/images';
 
-const SideBar = ({ sideBar, toggleSideBar }) => {
+const SideBar = ({ sideBar, hideSideBar }) => {
   return (
     <div className={`side-bar ${sideBar ? 'active' : null}`}>
       <div className="side-bar-container">
         <div className="close-icon">
-          <img
-            onClick={() => {
-              toggleSideBar(!sideBar);
-            }}
-            src={images.CloseIcon}
-            alt=""
-          />
+          <img onClick={hideSideBar} src={images.CloseIcon} alt="" />
         </div>
         <div className="list">
           <ul>
