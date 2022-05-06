@@ -1,0 +1,10 @@
+@import './sass/globals';
+
+.carousel-main {
+    @include respond-desktop {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        padding: 2.5rem 10rem;
+    }
+}

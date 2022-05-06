@@ -12,3 +12,22 @@ $light-grey: hsl(220, 14%, 75%);
 $near-white: hsl(223, 64%, 98%);
 $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%); //with 75% opacity for lightbox background
+
+//media querries
+@mixin respond-tablet {
+    @media (min-width: 750px) {
+        @content;
+    }
+}
+
+@mixin respond-large {
+    @media (min-width: 790px) {
+        @content;
+    }
+}
+
+@mixin respond-desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}

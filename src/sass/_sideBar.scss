@@ -5,9 +5,18 @@
     z-index: 100;
     background: $white;
     height: 100%;
-    min-width: 80vw;
+    width: 80vw;
     transform: translateX(-100%);
     transition: all 300ms ease-in-out 30ms;
+
+    @include respond-desktop {
+        transform: translate(0);
+        max-width: 40vw;
+        height: fit-content;
+        background: none;
+        top: 1.8rem;
+        transform: translateX(60%);
+    }
 
     &.active {
         transform: translateX(0);
@@ -16,19 +25,45 @@
     .side-bar-container {
         padding: 1.5rem 0 0 2.5rem;
 
+        @include respond-desktop {
+            padding: 0;
+        }
+
         .close-icon {
             margin-bottom: 3rem;
+
+            @include respond-desktop {
+                display: none;
+            }
         }
 
         .list {
             ul {
                 list-style: none;
+
+                @include respond-desktop {
+                    display: flex;
+                }
             }
 
             li {
                 padding: 0.65rem 0;
                 font-size: 1.25rem;
                 font-weight: 700;
+
+                @include respond-desktop {
+                    padding: 0.65rem 0.4rem 1.7rem 0.4rem;
+                    margin: 0 0.35rem;
+                    font-size: 1rem;
+                    color: $grey;
+                    cursor: pointer;
+                    border-bottom-width: 0;
+                    transition: all 100ms ease-in-out 10ms;
+
+                    &:hover {
+                        border-bottom: 4px solid $orange;
+                    }
+                }
             }
         }
     }

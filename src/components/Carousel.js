@@ -11,6 +11,7 @@ const carouselImages = [
 
 const Carousel = () => {
   const [slideIndex, setIndex] = useState(0);
+  const [largeImageIndex, setLargeIndex] = useState(images.Product1);
 
   return (
     <div className="carousel">
@@ -27,9 +28,21 @@ const Carousel = () => {
               : null
           }`}
         >
-          {carouselImages.map((src, i) => (
-            <img src={src} key={i} alt="" />
-          ))}
+          <div className="large-image">
+            <img src={largeImageIndex} alt="" />
+          </div>
+          <div className="thumbnails">
+            {carouselImages.map((src, i) => (
+              <img
+                src={src}
+                key={i}
+                alt=""
+                onClick={() => {
+                  setLargeIndex(src);
+                }}
+              />
+            ))}
+          </div>
         </div>
         <NextArrow setIndex={setIndex} slideIndex={slideIndex} />
       </div>

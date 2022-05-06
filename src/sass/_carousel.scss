@@ -1,3 +1,5 @@
+@import 'globals';
+
 .carousel {
     .image {
         width: 100%;
@@ -8,7 +10,10 @@
             width: 400vw;
             position: relative;
             transition: transform 1s ease-in-out 10ms;
-            animation: slideIn 20s ease-in-out 1s infinite;
+
+            @include respond-desktop {
+                width: 100%;
+            }
 
             &.first {
                 transform: translateX(-100vw);
@@ -27,6 +32,48 @@
 
             img {
                 width: 100vw;
+
+                @include respond-desktop {
+                    width: 18%;
+                    border-radius: 0.5rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        filter: opacity(0.8);
+                    }
+                }
+            }
+
+            .large-image {
+                display: none;
+
+                @include respond-desktop {
+                    display: block;
+                    width: 75%;
+                    height: 80vh;
+                    margin: 0 auto;
+                }
+
+                img {
+                    @include respond-desktop {
+                        width: 80%;
+                        border-radius: 1rem;
+
+                        &:hover {
+                            filter: none;
+                        }
+                    }
+                }
+            }
+
+            .thumbnails {
+                @include respond-desktop {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 60%;
+                    margin: 0 auto;
+                    transform: translate(-3.2rem, -7rem);
+                }
             }
         }
 
@@ -42,6 +89,10 @@
             background: #fff;
             border-radius: 50%;
             display: flex;
+
+            @include respond-desktop {
+                display: none;
+            }
 
             img {
                 width: auto;

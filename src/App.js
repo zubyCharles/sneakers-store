@@ -14,8 +14,10 @@ const App = () => {
         setCount={setCount}
         itemPrice={itemPrice}
       />
-      <Carousel />
-      <Main itemCount={itemCount} setCount={setCount} itemPrice={itemPrice} />
+      <div className="carousel-main">
+        <Carousel />
+        <Main itemCount={itemCount} setCount={setCount} itemPrice={itemPrice} />
+      </div>
     </>
   );
 };

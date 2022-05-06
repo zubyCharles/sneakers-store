@@ -10,7 +10,7 @@
 }
 
 .menu {
-    overflow-x: hidden;
+    overflow: hidden;
 
     .menu-container {
         width: fit-content;
@@ -19,6 +19,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        @include respond-desktop {
+            width: 75%;
+            padding: 1.6rem 0;
+        }
 
         div {
             display: flex;
@@ -32,11 +37,16 @@
                 height: 40%;
                 transform: translateY(1rem);
                 margin-right: 0.8rem;
+
+                @include respond-desktop {
+                    display: none;
+                }
             }
 
             p {
                 font-size: 2rem;
                 font-weight: 700;
+                color: $dark-blue;
             }
         }
 
@@ -61,6 +71,7 @@
 
             img {
                 height: 60%;
+                cursor: pointer;
             }
 
             .avatar {

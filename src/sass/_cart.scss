@@ -9,10 +9,19 @@
     background: $white;
     border-radius: 0.5rem;
 
+    @include respond-desktop {
+        width: 20vw;
+        left: 70%;
+    }
+
     .header {
         padding: 1.5rem 1rem;
         display: flex;
         justify-content: space-between;
+
+        @include respond-desktop {
+            padding: 1rem;
+        }
 
         p {
             font-weight: 700;
@@ -37,6 +46,10 @@
             img {
                 width: 100%;
                 border-radius: 0.4rem;
+
+                @include respond-desktop {
+                    width: 80%;
+                }
             }
         }
 
@@ -46,6 +59,10 @@
 
             p {
                 color: $grey;
+
+                @include respond-desktop {
+                    font-size: 0.9rem;
+                }
             }
 
             span {
@@ -75,11 +92,20 @@
             padding: 1rem 0;
             border-radius: 0.4rem;
             text-align: center;
+
+            @include respond-desktop {
+                font-size: 1.1rem;
+                padding: 0.8rem 0;
+            }
         }
     }
 
     .empty {
         padding: 5.27rem 1rem;
+
+        @include respond-desktop {
+            padding: 4rem 1rem;
+        }
 
         p {
             text-align: center;

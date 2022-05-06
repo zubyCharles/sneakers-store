@@ -1,5 +1,11 @@
 @import 'globals';
 
+main {
+    @include respond-desktop {
+        width: 250%;
+    }
+}
+
 .main-container {
     padding: 1.5rem 1rem;
 
