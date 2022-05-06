@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import '../sass/_topMenu.scss';
-import images from '../assets/images';
 import SideBar from './SideBar';
 import Cart from './Cart';
+import images from '../assets/images';
 
 const TopMenu = ({ itemCount, setCount, itemPrice }) => {
   const [showSideBar, setSideBar] = useState(false);
