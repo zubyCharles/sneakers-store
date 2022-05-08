@@ -26,7 +26,10 @@ const TopMenu = ({ itemCount, setCount, itemPrice }) => {
 
   return (
     <>
-      <div className={showSideBar || showCart ? 'overlay' : null}></div>
+      <div
+        className={showSideBar || showCart ? 'overlay' : null}
+        onClick={() => setSideBar(false)}
+      ></div>
       <SideBar sideBar={showSideBar} hideSideBar={hideSideBar} />
       {showCart && (
         <Cart
